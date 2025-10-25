@@ -1,4 +1,8 @@
 
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl"])
 
 import streamlit as st
 import pandas as pd
@@ -9,14 +13,7 @@ try:
     st.success("✅ openpyxl está instalado correctamente.")
 except ImportError:
     st.error("❌ openpyxl NO está instalado en el entorno.")
-try:
-    import subprocess
-    import sys
 
-    import openpyxl
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl"])
-    import openpyxl
 
 
 
@@ -154,6 +151,7 @@ else:
     st.info("No hay coincidencias con la búsqueda.")
 
 #Reconstrucion forzada para instalar openpyxl
+
 
 
 
